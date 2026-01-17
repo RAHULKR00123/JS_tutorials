@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="txt">Style me with JavaScript</p>
+
+<button onclick="makeRed()">Red</button>
+<button onclick="makeBig()">Big</button>
+<button onclick="reset()">Reset</button>
+
+<script>
+function makeRed() {
+  document.getElementById("txt").style.color = "red";
+}
+
+function makeBig() {
+  document.getElementById("txt").style.fontSize = "30px";
+}
+
+function reset() {
+  let t = document.getElementById("txt");
+  t.style.color = "black";
+  t.style.fontSize = "16px";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="text" style="display: none;">Hello JavaScript</p>
+<button onclick="toggleshow()">Show</button>
+<button onclick="togglehide()">Hide</button>
+
+<script>
+ let el = document.getElementById("text");
+ let btn = event.target;
+function toggleshow() {
+ 
+
+  
+    el.style.display = "block";
+    
+  } 
+  function togglehide(){
+    el.style.display = "none";
+   
+  }
+
+</script>
+
+</body>
+</html>
+<!-- <button onclick="handleClick(event)">Click me</button> 
+Here, event contains details about:
+
+what happened
+where it happened
+which element triggered it
+
+event.target = the exact HTML element that was clicked
+
+event.target        Actual element clicked
+event.currentTarget  Element that owns the listener
+
+<button><span>Click</span></button>
+If you click <span>:
+
+event.target → <span>
+event.currentTarget → <button>
+
+
+
+-->

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button id="actionBtn" onclick="doSomething()">Action</button>
+<button onclick="disableBtn()">Disable</button>
+<button onclick="enableBtn()">Enable</button>
+
+<p id="msg"></p>
+
+<script>
+
+let clicks = 0;
+function doSomething() {
+  clicks++;
+  document.getElementById("msg").innerText = "Action button clicked "+clicks+" times";
+  
+  if(clicks == 3){
+    document.getElementById("actionBtn").disabled = true;
+    document.getElementById("msg").innerText = "action button disabled because its been clicked 3 times";
+    clicks=0;
+  }
+}
+
+function disableBtn() {
+  document.getElementById("actionBtn").disabled = true;
+    document.getElementById("msg").innerText = "action button disabled";
+  
+}
+
+function enableBtn() {
+  document.getElementById("msg").innerText = "action button enabled again";
+  document.getElementById("actionBtn").disabled = false;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input id="num" type="number" placeholder="Enter a number">
+<button onclick="check()">Check</button>
+
+<p id="res"></p>
+
+<script>
+function check() {
+  let n = document.getElementById("num").value;
+  let response = document.getElementById("res");
+  if(n == 0){
+    document.getElementById("res").innerText = "Enter a number please, Danke";
+  }
+  else{
+  if (n % 2 === 0) {
+    response.innerText = "Even";
+    response.style.backgroundColor = "green";
+  } else {
+    document.getElementById("res").innerText = "Odd";
+    response.style.backgroundColor = "red";
+  }
+}
+}
+</script>
+
+</body>
+</html>

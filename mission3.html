@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input id="name" placeholder="Enter your name">
+<button onclick="greet()">Greet</button>
+
+<p id="out"></p>
+
+<script>
+
+function greet() {
+  let name = document.getElementById("name").value;
+  let upperCaseName = name.toUpperCase();
+  if(name != 0){
+    document.getElementById("out").innerText = "Hello " + upperCaseName;
+}
+else{document.getElementById("out").innerText = "please enter your name first";}
+}  
+</script>
+
+</body>
+</html>

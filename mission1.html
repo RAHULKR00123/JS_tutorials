@@ -2,33 +2,44 @@
 <html>
 <head>
 <style>
-  #box {
-    width: 50px;
-    height: 50px;
+  .box {
+    width: 10px;
+    height: 5px;
     background: blue;
     position: relative;
     left: 0px;
     top: 0px;
   }
+  
 </style>
 </head>
 <body>
 
 <button onclick="keepboxmoving()">Move</button>
 
-<div id="box"></div>
 
 <script>
-  let pos = 0;
-
+  let ypos = 0;
+  let xpos = 0;
+  let a=0;
   function moveBox() {
-    pos += 1;
-    document.getElementById("box").style.left = pos + "px";
-    document.getElementById("box").style.top = pos + "px";
+    
+    a++;
+    const row = document.createElement("div");
+    row.className = "box";
+    row.id = `box${a}`;
+    document.body.appendChild(row);
+
+    xpos += 10;
+    ypos = xpos/15*xpos/15;
+    document.getElementById(`box${a}`).style.left = xpos + "px";
+    document.getElementById(`box${a}`).style.top = ypos + "px";
+
+   
   }
   function keepboxmoving(){
-   let a= setInterval(moveBox,10)
-   setInterval(()=>{clearInterval(a)},500)
+   let b= setInterval(moveBox,100)
+   setInterval(()=>{clearInterval(b)},2500)
   }
 </script>
 

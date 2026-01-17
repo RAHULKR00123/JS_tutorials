@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="show()">Show Items</button>
+<p id="out"></p>
+
+<script>
+let items = ["Apple", "Banana", "Mango", "Orange"];
+
+function show() {
+  let text = "";
+  for (let i = 0; i < items.length; i++) {
+    text += items[i] + " ";
+  }
+  document.getElementById("out").innerText = text;
+}
+</script>
+
+</body>
+</html>

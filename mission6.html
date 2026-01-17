@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input id="limit" type="number" placeholder="Enter max number">
+<button onclick="printTill()">Print</button>
+
+<p id="out"></p>
+
+<script>
+function printTill() {
+  let max = document.getElementById("limit").value;
+  let text = "";
+  if(max !=0){
+  for (let i = 1; i <= max; i++) {
+    text += i + " ";
+  }
+  document.getElementById("out").innerText = text;
+}
+else{
+    document.getElementById("out").innerText = "please enter a value to start, arigato :-)";
+}
+
+  
+}
+</script>
+
+</body>
+</html>

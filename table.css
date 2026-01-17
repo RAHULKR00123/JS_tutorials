@@ -1,0 +1,34 @@
+
+.big-container{display: flex;}
+.grid-table {
+    width: 80%;
+    border-collapse: collapse; /* VERY IMPORTANT */
+  }
+
+  .grid-table th,
+  .grid-table td {
+    border: 1px solid black;  /* grid lines */
+    padding: 8px;
+    text-align: left;
+  }
+
+  .grid-table th {
+    background-color: #f2f2f2;
+  }
+  button{
+    display: block;
+    width: 80px;
+    background-color: greenyellow;
+    border: 2px solid rgb(43, 185, 79);
+  }
+  .none{
+  border: none;
+  
+}
+.container1{
+  display: flex;
+  flex-direction: column;
+ padding-top: 42px;
+ padding-left: 10px;
+ gap: 12px;
+}

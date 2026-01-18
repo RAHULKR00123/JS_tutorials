@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="show()">Show Info</button>
+<p id="out"></p>
+
+<script>
+let person = {
+  name: "Rahul",
+  age: 20,
+  city: "Delhi",
+  crush: "Suhani" 
+};
+
+function show() {
+  document.getElementById("out").innerText ="My name is " + person.name + ". I am " + person.age + " years old and i live in " + person.city + ". "+person.crush + "was my crush and i was in love with her.";
+}
+</script>
+
+</body>
+</html>

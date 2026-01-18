@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+<input type="number" placeholder="1st number" id="num1">
+<input type="number" placeholder="2nd number" id="num2">
+<button onclick="showSum()">Show Sum</button>
+<p id="out"></p>
+<button onclick="showProduct()">Show Product</button>
+<p id="out"></p>
+
+<script>
+  
+function add(a,b){
+  return a + b;
+}
+function Product(a,b){
+    return a*b;
+}
+
+function showSum() {
+      let c = Number(document.getElementById("num1").value);
+    let d = Number(document.getElementById("num2").value);
+  let result = add(c,d);
+  document.getElementById("out").innerText = "Sum is " + result;
+}
+function showProduct() {
+      let c = Number(document.getElementById("num1").value);
+    let d = Number(document.getElementById("num2").value);
+  let result = Product(c,d);
+  document.getElementById("out").innerText = "Product is " + result;
+}
+</script>
+
+</body>
+</html>

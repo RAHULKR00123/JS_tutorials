@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input id="box" placeholder="Type something">
+<p id="out"></p>
+
+<script>
+document.getElementById("box").addEventListener("keydown", showKey);
+
+function showKey(event) {
+    if(event.key==="Shift" || event.key === "Control" || event.key === "Alt"){
+        return 0;
+    }
+    else{
+  document.getElementById("out").innerText = "Key: " + event.key + " | Code: " + event.code;
+}
+}
+</script>
+
+</body>
+</html>

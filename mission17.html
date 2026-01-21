@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button onclick="start()">Start Timer</button>
+<button onclick="stop()">Stop Timer</button>
+<p id="out"></p>
+<p id="time"></p>
+
+<script>
+function start() {
+  let i=0; 
+  setTimeout(showMsg, 4100);
+  
+  let b = setInterval(time,100);
+  setInterval(clear,4100);
+  function clear(){
+    clearInterval(b);
+
+  }
+  
+  function time(){
+    i++; 
+    document.getElementById("time").innerText= i;
+    }
+}
+function stop() {
+  clearTimeout(showMsg, 4000);
+  
+}
+
+function showMsg() {
+  document.getElementById("out").innerText = "3 seconds passed";
+}
+</script>
+
+</body>
+</html>
+<!-- 
+let timer1 = setInterval(() => {
+  console.log("Timer 1 running");
+}, 1000);
+
+let timer2 = setInterval(() => {
+  console.log("Timer 2 running");
+}, 1500);
+
+clearInterval(timer1); 
+-->

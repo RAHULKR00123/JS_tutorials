@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button id="btn1">greetings</button>
+<button id="btn2">good bye</button>
+<p id="out"></p>
+
+<script>
+    let button1_clicks =0;
+    let button2_clicks =0;
+document.getElementById("btn1").addEventListener("click", sayHi);
+document.getElementById("btn2").addEventListener("click", sayBye);
+
+function sayHi() {
+  button1_clicks ++;
+  document.getElementById("out").innerText = "Button 1 clicked "+ button1_clicks +" times.";
+  
+}
+function sayBye() {
+  button2_clicks ++;
+  document.getElementById("out").innerText = "Button 2 clicked "+ button2_clicks +" times.";
+}
+</script>
+
+</body>
+</html>

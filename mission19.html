@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button id="Add" onclick="addItem(this)">Add</button>
+<button id="Remove" onclick="addItem(this)">Remove</button>
+
+<div id="box"></div>
+
+<script>
+let count = 1;
+
+function addItem(btn) {
+  const box = document.getElementById("box");
+ if(btn.id === "Add"){let p = document.createElement("p");
+  p.innerText = "Item " + count;
+  document.getElementById("box").appendChild(p);
+  count++;}
+ if(btn.id === "Remove"){
+  box.lastElementChild.remove();
+  count--;
+ }
+}
+</script>
+
+</body>
+</html>
+
+<!-- 
+ let p = document.createElement("p");
+  p.innerText = "Item " + count; 
+  -->

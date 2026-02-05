@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input id="first" placeholder="First value">
+<input id="second" placeholder="Second value">
+
+<button onclick="combine()">Combine</button>
+
+<p id="out"></p>
+
+<script>
+function combine() {
+  let a = document.getElementById("first").value;
+  let b = document.getElementById("second").value;
+  if(a === ""||b===""){
+    document.getElementById("out").innerText = "please enter the value in both the input boxes";
+    return;
+  }
+  document.getElementById("out").innerText = a + "-" + b;
+}
+</script>
+
+</body>
+</html>

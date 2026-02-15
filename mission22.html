@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input id="item" placeholder="Enter value">
+<button onclick="add()">Add</button>
+<button onclick="removeItem()">Remove</button>
+
+<p id="out"></p>
+
+<script>
+let arr = [];
+
+function add() {
+  let val = document.getElementById("item").value;
+  arr.push(val);
+  document.getElementById("out").innerText = arr.join(", ");
+}
+
+function removeItem() {
+  let val = document.getElementById("item").value;
+  let i;
+  for (i = 0; i < arr.length; i++) {
+    if (arr[i] === val) {
+      arr.splice(i, 1);  //USED TO DELETE ONLY 1 ELEMENT ARR.SPLICE(STARTING-INDEX,NUMBER OF ELEMENTS TO BE DELETED)
+      break;
+    }
+
+  }
+  if(i == arr.length){
+    alert(val+" not found");
+    
+  }
+  else
+ { document.getElementById("out").innerText = arr.join(", ");
+}
+}
+</script>
+
+</body>
+</html>
+
+
+<!-- 
+string.indexOf(searchValue, fromIndex) is used to find starting index of any number in an array
+-->
